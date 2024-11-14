@@ -25,6 +25,7 @@ class CalculatorKeypad extends StatelessWidget {
               child: CalculatorButton(
                 value: value,
                 onTap: () => onButtonTap(value),
+                backgroundColor: Colors.white,
               ),
             ),
           )
