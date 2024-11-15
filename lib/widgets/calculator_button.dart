@@ -9,8 +9,8 @@ class CalculatorButton extends StatelessWidget {
     required this.value,
     required this.onTap,
     required this.backgroundColor,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

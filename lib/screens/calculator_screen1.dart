@@ -29,12 +29,15 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        bottom: false,
-        child: Column(
-          children: [
-            CalculatorDisplay(displayValue: _state.displayValue),
-            CalculatorKeypad(onButtonTap: _onButtonTap),
-          ],
+        bottom: true,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 20),
+          child: Column(
+            children: [
+              CalculatorDisplay(displayValue: _state.displayValue),
+              CalculatorKeypad(onButtonTap: _onButtonTap),
+            ],
+          ),
         ),
       ),
     );

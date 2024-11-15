@@ -1,3 +1,4 @@
+import 'package:calculator_app/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:calculator_app/constants/button_values.dart';
 import 'package:calculator_app/widgets/calculator_button.dart';
@@ -7,8 +8,8 @@ class CalculatorKeypad extends StatelessWidget {
 
   const CalculatorKeypad({
     required this.onButtonTap,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -16,20 +17,39 @@ class CalculatorKeypad extends StatelessWidget {
 
     return Wrap(
       children: Btn.buttonValues
-          .map(
-            (value) => SizedBox(
-              width: value == Btn.n0
-                  ? screenSize.width / 2
-                  : (screenSize.width / 4),
-              height: screenSize.width / 5,
-              child: CalculatorButton(
-                value: value,
-                onTap: () => onButtonTap(value),
-                backgroundColor: Colors.white,
-              ),
-            ),
-          )
-          .toList(),
+        .map(
+        (value) {
+          Color backgroundColor;
+          switch (value) {
+          case Btn.del:
+            backgroundColor = const Color(CColor.secondaryDarkColor);
+            break;
+          case Btn.clr:
+            backgroundColor = Colors.orange;
+            break;
+          case Btn.add:
+            backgroundColor = Colors.green;
+            break;
+          case Btn.subtract:
+            backgroundColor = Colors.blue;
+            break;
+          default:
+            backgroundColor = Colors.white;
+          }
+          return SizedBox(
+          width: value == Btn.n0
+            ? screenSize.width / 2
+            : (screenSize.width / 4),
+          height: screenSize.width / 5,
+          child: CalculatorButton(
+            value: value,
+            onTap: () => onButtonTap(value),
+            backgroundColor: backgroundColor,
+          ),
+          );
+        },
+        )
+        .toList(),
     );
   }
 }

@@ -5,8 +5,8 @@ class CalculatorDisplay extends StatelessWidget {
 
   const CalculatorDisplay({
     required this.displayValue,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
