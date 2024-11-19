@@ -20,7 +20,7 @@ class CalculatorButton extends StatelessWidget {
         color: backgroundColor,
         clipBehavior: Clip.hardEdge,
         shape: OutlineInputBorder(
-          borderSide: const BorderSide(color: Colors.white24),
+          borderSide: const BorderSide(color: Colors.black),
           borderRadius: BorderRadius.circular(100),
         ),
         child: InkWell(
