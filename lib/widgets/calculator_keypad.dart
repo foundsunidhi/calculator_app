@@ -29,18 +29,18 @@ class CalculatorKeypad extends StatelessWidget {
               backgroundColor = const Color.fromARGB(255, 252, 164, 32);
               break;
             case Btn.calculate:
-              backgroundColor = const Color.fromARGB(255, 243, 222, 33);
+              backgroundColor = const Color.fromARGB(255, 255, 236, 64);
             case Btn.add:
-              backgroundColor = const Color.fromARGB(255, 243, 222, 33);
+              backgroundColor = const Color.fromARGB(255, 255, 236, 64);
               break;
             case Btn.subtract:
-              backgroundColor = const Color.fromARGB(255, 243, 222, 33);
+              backgroundColor = const Color.fromARGB(255, 255, 236, 64);
               break;
             case Btn.multiply:
-              backgroundColor = const Color.fromARGB(255, 243, 222, 33);
+              backgroundColor = const Color.fromARGB(255, 255, 236, 64);
               break;
             case Btn.divide:
-              backgroundColor = const Color.fromARGB(255, 243, 222, 33);
+              backgroundColor = const Color.fromARGB(255, 255, 236, 64);
               break;
             case Btn.dot:
               backgroundColor = const Color.fromARGB(255, 252, 164, 32);
